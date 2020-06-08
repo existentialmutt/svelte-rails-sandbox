@@ -1,0 +1,38 @@
+  
+  <h1 class="page-title">
+    <blink>A traditional webpoll</blink>
+  </h1>
+
+<div class="row">
+  
+
+
+  <div class="col">
+    <h3>Question. Which bear is best?</h3>
+
+    <%= svelte_component "VoteInput", choiceKey: "blackBear", label: "Black Bear", avatarSrc: image_path("blackbear.jpg") %>
+    <%= svelte_component "VoteInput", choiceKey: "brownBear", label: "Brown Bear", avatarSrc: image_path("brownbear.jpg") %>
+    <%= svelte_component "VoteInput", choiceKey: "beets", label: "False. Beets are the superior lifeform.", avatarSrc: image_path("beets.jpg") %>
+  </div>
+
+  <div class="col">
+    <%= image_tag "dwight5.jpg", style: "width: 100%;" %>
+    <marquee style="color: red;">Bears! Beets! Battlestar Galactica!</marquee>
+  </div>
+
+  <div class="col">
+    <h3>Results</h3>
+
+    
+
+    <%= svelte_component "VoteCounter", choiceKey: "blackBear", label: "Black Bear", avatarSrc: image_path("blackbear.jpg") %>
+    <%= svelte_component "VoteCounter", choiceKey: "brownBear", label: "Brown Bear", avatarSrc: image_path("brownbear.jpg") %>
+    <%= svelte_component "VoteCounter", choiceKey: "beets", label: "Beets", avatarSrc: image_path("beets.jpg") %>
+  </div>
+
+
+</div>
+  
+  
+
+
